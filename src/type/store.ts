@@ -4,5 +4,5 @@ export type StoreState = {
 };
 
 export type StoreAction =
-    | { type: "change"; key: string; value: any }
+    | { type: "change"; key: keyof StoreState; value: StoreState[keyof StoreState] }
     | { type: "changeMore"; obj: Partial<StoreState> };

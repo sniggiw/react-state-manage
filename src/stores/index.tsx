@@ -14,7 +14,7 @@ export const PageDispatchContext =
  * @param action 动作（类型）
  * @returns 新的状态
  */
-export const PageReducer = (state: any, action: StoreAction) => {
+export const PageReducer = (state: StoreState, action: StoreAction): StoreState => {
     switch (action.type) {
         case "change":
             return { ...state, [action.key]: action.value };

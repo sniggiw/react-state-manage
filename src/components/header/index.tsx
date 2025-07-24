@@ -1,5 +1,5 @@
 import useStore from "../../hooks/useStore";
-import styles from "./ index.module.scss";
+import styles from "./index.module.scss";
 
 export default function Header() {
     const { storeState, dispatch } = useStore();
@@ -11,7 +11,6 @@ export default function Header() {
             value: storeState.name.split("").reverse().join(""),
         });
     };
-
     return (
         <div className={styles.header}>
             <h2>header</h2>
