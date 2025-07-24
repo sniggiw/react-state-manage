@@ -1,13 +1,16 @@
 import { useReducer } from "react";
 import Header from "./components/header";
 import Main from "./components/main";
-import { PageDispatchContext, PageReducer, PageStateContext } from "./stores";
 import styles from "./index.module.scss";
+import {
+    PageDispatchContext,
+    PageReducer,
+    PageStateContext,
+    initPageState,
+} from "./stores";
 
 function App() {
-    const [initState, dispatch] = useReducer(PageReducer, {
-        name: "wiggins",
-    });
+    const [initState, dispatch] = useReducer(PageReducer, initPageState);
 
     return (
         <PageStateContext.Provider value={initState}>
